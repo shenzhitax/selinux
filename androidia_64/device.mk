@@ -29,6 +29,14 @@ $(call inherit-product-if-exists,frameworks/base/data/sounds/AudioPackage6.mk)
 # Get Platform specific settings
 $(call inherit-product-if-exists,vendor/vendor.mk)
 
+# Include GMS apps into build system
+FLAG_GMS_AVAILABLE ?= true
+
+ifeq ($(FLAG_GMS_AVAILABLE),true)
+FLAG_GMS_MINIMAL := true
+$(call inherit-product-if-exists, vendor/google/gms/products/gms.mk)
+endif
+
 #Product Characteristics
 PRODUCT_COPY_FILES += \
     $(if $(wildcard $(PRODUCT_DIR)fstab.$(TARGET_PRODUCT)),$(PRODUCT_DIR)fstab.$(TARGET_PRODUCT),$(LOCAL_PATH)/fstab):root/fstab.$(TARGET_PRODUCT) \

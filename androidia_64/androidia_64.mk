@@ -8,3 +8,5 @@ PRODUCT_NAME := androidia_64
 PRODUCT_BRAND := AndroidIA
 PRODUCT_DEVICE := androidia_64
 PRODUCT_MODEL := Generic androidia_64
+
+PRODUCT_SHIPPING_API_LEVEL := 25
