@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 /sys/kernel/debug/sync      u:object_r:debugfs_graphics_sync:s0
+=======
+/sys/kernel/debug/sync(/.*)?      u:object_r:debugfs_graphics_sync:s0
+>>>>>>> e220405... add sepolicy file for crashlogd
